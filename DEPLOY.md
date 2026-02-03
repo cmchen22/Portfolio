@@ -89,3 +89,16 @@ Do these in order:
 ---
 
 - **Page is blank or broken:** Make sure you uploaded `index.html` at the **root** of the repo (not inside a subfolder).
+
+---
+
+## Verification checklist (INFO 490 rubric)
+
+After pushing changes:
+
+1. **Build/preview locally:** Open `index.html` in a browser (or run a local server from the repo root) and confirm the page loads.
+2. **Deploy:** Push to GitHub; wait 1–2 minutes for Pages to update.
+3. **Live site:** Open **https://cmchen22.github.io/portfolio/** (or your repo name, e.g. …/Portfolio/ if the repo is capitalized).
+4. **Project links:** Click each “View project →” link (Bookmarked, SoccerSim, Fantasy Football) and confirm you land on the correct section with no 404.
+5. **Rubric labels:** On each project section, confirm these headings are visible: *Name of Project*, *Goals of Project*, *Your role in the project*, *Problem and/or opportunity*, *Your process and solution*, *Outcome and next steps*, *The takeaways*, *URL(s)*.
+6. **URL(s):** Confirm each project has a working GitHub repo link (and add live demo / docs links in the content if you have them).

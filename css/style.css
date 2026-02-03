@@ -294,6 +294,21 @@ main {
   font-weight: 500;
 }
 
+.project-detail {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  scroll-margin-top: 4rem;
+}
+
+.project-detail h3 {
+  margin-bottom: var(--space-lg);
+}
+
+.project-detail p {
+  margin-bottom: var(--space-md);
+}
+
 /* --- Skills --- */
 .skills-list {
   list-style: none;

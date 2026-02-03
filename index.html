@@ -147,6 +147,15 @@
     .project-card h3 { color: var(--color-text); }
     .project-card p { font-size: 0.9rem; margin-bottom: var(--space-md); }
     .project-link { font-size: 0.9rem; font-weight: 500; }
+    .project-detail {
+      margin-top: var(--space-2xl);
+      padding-top: var(--space-2xl);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      scroll-margin-top: 4rem;
+    }
+    .project-detail h3 { margin-bottom: var(--space-lg); }
+    .project-detail p { margin-bottom: var(--space-md); }
+    .projects-intro { font-size: 0.95rem; margin-bottom: var(--space-lg); }
     .skills-list {
       list-style: none;
       margin: 0;
@@ -180,7 +189,7 @@
 
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a href="#" class="nav-logo">Christopher Chen</a>
+      <a href="#main" class="nav-logo">Christopher Chen</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -212,23 +221,63 @@
 
     <section id="projects" class="section projects">
       <h2>Projects</h2>
+      <p class="projects-intro">Click <strong>View project →</strong> on each card to jump to the full details (assignment checklist) below.</p>
       <div class="project-grid">
         <article class="project-card">
           <h3>Bookmarked (UW Capstone)</h3>
           <p>Full-stack social reading platform—React, TypeScript, Node.js, PostgreSQL, Prisma. Users rate, tag, organize, and discover books via social signals. Designed relational schemas and ran user research (25 respondents) to validate product decisions.</p>
-          <a href="#" class="project-link">View project →</a>
+          <a href="#bookmarked" class="project-link">View project →</a>
         </article>
         <article class="project-card">
           <h3>SoccerSim</h3>
           <p>Large-scale football management and match simulation engine in TypeScript, Node.js, PostgreSQL. Probabilistic match logic, player progression, season simulations, and performance benchmarking with long-term data persistence.</p>
-          <a href="#" class="project-link">View project →</a>
+          <a href="#soccersim" class="project-link">View project →</a>
         </article>
         <article class="project-card">
           <h3>Fantasy Football Web App</h3>
           <p>Real-time fantasy football app built with React, JavaScript, and Firebase. Integrates external APIs for live player stats and performance tracking.</p>
-          <a href="#" class="project-link">View project →</a>
+          <a href="#fantasy-football" class="project-link">View project →</a>
         </article>
       </div>
+
+      <section id="bookmarked" class="project-detail">
+        <h3>Bookmarked (UW Capstone)</h3>
+        <p><strong>Name of Project:</strong> Bookmarked (UW Capstone)</p>
+        <p><strong>Goals of Project:</strong> Build a full-stack social reading platform where users can rate, tag, organize, and discover books via social signals; validate product decisions through user research.</p>
+        <p><strong>Your role in the project:</strong> Full-stack development and product design; designed relational schemas; led user research (25 respondents) to validate product decisions as part of Team JAAC.</p>
+        <p><strong>Problem and/or opportunity:</strong> Readers lack a single place to track what they’ve read, share recommendations, and discover books through friends’ tastes. Social reading and organization tools are fragmented.</p>
+        <p><strong>Your process and solution:</strong> Used React, TypeScript, Node.js, PostgreSQL, and Prisma to build the app; ran user research to prioritize features; designed and implemented the database schema and core flows for rating, tagging, and discovery.</p>
+        <p><strong>Outcome and next steps:</strong> Capstone in progress. Next steps: launch MVP, gather feedback, and iterate on discovery and social features.</p>
+        <p><strong>The takeaways:</strong> Importance of user research before scaling features; value of a clear relational model for social and recommendation data.</p>
+        <p><strong>URL(s):</strong> Bookmarked does not have a public repository yet. Live demo and docs TBD as project launches.</p>
+        <p><a href="#projects" class="project-link">↑ Back to Projects</a></p>
+      </section>
+
+      <section id="soccersim" class="project-detail">
+        <h3>SoccerSim</h3>
+        <p><strong>Name of Project:</strong> SoccerSim</p>
+        <p><strong>Goals of Project:</strong> Build a large-scale football management and match simulation engine with probabilistic match logic, player progression, season simulations, and long-term data persistence.</p>
+        <p><strong>Your role in the project:</strong> Design and implementation of the simulation engine, database schema, and performance benchmarking in TypeScript, Node.js, and PostgreSQL.</p>
+        <p><strong>Problem and/or opportunity:</strong> Existing football sims are either too simplistic or closed-source. Opportunity to create a flexible, data-driven simulation with transparent logic and persistent state.</p>
+        <p><strong>Your process and solution:</strong> Implemented probabilistic match logic and player progression; used PostgreSQL for persistence; ran performance benchmarks to support large-scale season simulations.</p>
+        <p><strong>Outcome and next steps:</strong> Working simulation with season runs and data persistence. Next steps: richer tactics, more leagues, and optional UI for management gameplay.</p>
+        <p><strong>The takeaways:</strong> Balancing simulation fidelity with performance; value of a clear data model for players, matches, and seasons.</p>
+        <p><strong>URL(s):</strong> <a href="https://github.com/cmchen22/Soccer-Sim" target="_blank" rel="noopener">GitHub repo</a>. Live demo and docs linked from repo if available.</p>
+        <p><a href="#projects" class="project-link">↑ Back to Projects</a></p>
+      </section>
+
+      <section id="fantasy-football" class="project-detail">
+        <h3>Fantasy Football Web App</h3>
+        <p><strong>Name of Project:</strong> Fantasy Football Web App</p>
+        <p><strong>Goals of Project:</strong> Build a real-time fantasy football app that integrates external APIs for live player stats and performance tracking.</p>
+        <p><strong>Your role in the project:</strong> Front-end and integration work: React, JavaScript, and Firebase for real-time data and UI.</p>
+        <p><strong>Problem and/or opportunity:</strong> Fantasy players want up-to-date stats and a clear view of their roster performance without switching between multiple sites.</p>
+        <p><strong>Your process and solution:</strong> Used React and Firebase for the app; integrated external APIs for live player stats; built performance tracking and a simple, responsive UI.</p>
+        <p><strong>Outcome and next steps:</strong> Functional app with live stats and tracking. Next steps: more leagues/formats, better projections, and mobile-friendly refinements.</p>
+        <p><strong>The takeaways:</strong> API integration and real-time data handling; value of a simple UX for dense data.</p>
+        <p><strong>URL(s):</strong> <a href="https://github.com/info340-au23a/project-340-group-a1" target="_blank" rel="noopener">GitHub repo</a>. Live demo linked from repo if available.</p>
+        <p><a href="#projects" class="project-link">↑ Back to Projects</a></p>
+      </section>
     </section>
 
     <section id="skills" class="section skills">
