@@ -1,36 +1,57 @@
-/**
- * Portfolio — main JavaScript
- */
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Scroll Reveal Animation ---
+  const reveals = document.querySelectorAll(".reveal");
 
-(function () {
-  'use strict';
+  const revealOnScroll = () => {
+    const triggerBottom = (window.innerHeight / 5) * 4;
 
-  // Mobile nav toggle
-  const toggle = document.querySelector('.nav-toggle');
-  const menu = document.querySelector('.nav-menu');
+    reveals.forEach((reveal) => {
+      const revealTop = reveal.getBoundingClientRect().top;
 
-  if (toggle && menu) {
-    toggle.addEventListener('click', function () {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', !expanded);
-      menu.classList.toggle('is-open', !expanded);
+      if (revealTop < triggerBottom) {
+        reveal.classList.add("active");
+      }
     });
-  }
+  };
 
-  // Close menu when clicking a nav link (mobile)
-  const navLinks = document.querySelectorAll('.nav-menu a');
-  navLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-      if (menu && window.innerWidth < 600) {
-        toggle.setAttribute('aria-expanded', 'false');
-        menu.classList.remove('is-open');
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // Initial check
+
+  // --- Active Nav Link highlighting ---
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
       }
     });
   });
 
-  // Footer year
-  const yearEl = document.getElementById('year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
+  // --- Mobile Nav Logic (Optional expansion) ---
+  const menuBtn = document.querySelector(".nav-toggle");
+  const menu = document.querySelector(".nav-menu");
+
+  if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+      const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+      menuBtn.setAttribute("aria-expanded", !isExpanded);
+      menu.classList.toggle("is-open");
+    });
   }
-})();
+
+  // --- Year Update ---
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+});
