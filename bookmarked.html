@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarked | Capstone Project</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .case-study { margin-top: 100px; }
+    .case-section { margin-bottom: var(--space-xl); }
+    .case-section h3 { color: var(--color-primary); margin-bottom: var(--space-md); border-bottom: 1px solid var(--color-border); padding-bottom: 8px;}
+    .capsule {
+        display: inline-block;
+        padding: 4px 12px;
+        background: rgba(16, 185, 129, 0.1);
+        border-radius: 100px;
+        font-size: 0.85rem;
+        color: var(--color-primary);
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="nav-logo">← Back to Portfolio</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="case-study reveal">
+      <h1>Bookmarked</h1>
+      <p style="font-size: 1.25rem; color: var(--color-text-muted);">A Social Reading & Discovery Platform</p>
+      
+      <div style="margin: var(--space-lg) 0;">
+          <span class="capsule">Team JAAC</span>
+          <span class="capsule">Role: Developer</span>
+          <span class="capsule">Winter & Spring 2026</span>
+          <span class="capsule">UW Capstone</span>
+      </div>
+
+      <div class="case-section">
+        <h3>Project Goals & Problem Statement</h3>
+        <p>Current reading platforms fail to support how modern readers discover and express taste. Extensive team research (including 29 survey responses and numerous interviews) showed that only 5% of readers are fully satisfied with existing platforms like Goodreads. 69% feel the rigid 5-star rating system lacks nuance, and many struggle to organize books flexibly or articulate why they liked a book.</p>
+        <p><strong>Bookmarked</strong> was conceived to solve this. It is a social platform for discovering, organizing, and discussing books that is inspired by modern cultural platforms like Letterboxd. It allows users to track their reading, express nuanced taste through custom tags and curated lists, and discover new books via trusted readers rather than popularity-driven metrics.</p>
+      </div>
+
+      <div class="case-section">
+        <h3>The Process (Team Perspective)</h3>
+        <p>Throughout the Winter and Spring quarters, our team (Alison, Eunseo, Anna, and I) collaborated deeply on building this product from the ground up:</p>
+        <ul class="text-muted">
+            <li><strong>User Research & Validation:</strong> We conducted literature reviews, market analyses, and user surveys to validate our core concept. We discovered that book discovery is highly social and driven by trust in other readers.</li>
+            <li><strong>Ideation to MVP:</strong> We brainstormed features, mapped user journeys, and prioritized them into must-haves (like custom tags, lists, and curated feeds) and nice-to-haves. This informed our Winter MVP plan.</li>
+            <li><strong>Ethical Considerations:</strong> We explicitly addressed the dangers of algorithmic visibility and over-personalization, and built our platform to safeguard review integrity against toxic social pressures such as review bombing.</li>
+            <li><strong>Agile Execution:</strong> We maintained weekly check-ins, designated roles, and defined rigorous team agreements to hold ourselves accountable to deadlines.</li>
+        </ul>
+      </div>
+
+      <div class="case-section">
+        <h3>Individual Contributions & Learnings</h3>
+        <p>As a <strong>Developer</strong>, my distinct contributions focused on technical execution, user research around taste networks, and maintaining creativity in design constraints:</p>
+        <ul class="text-muted">
+            <li><strong>Architecture & Stack Implementation:</strong> I spearheaded the integration of our technical stack: React + TypeScript, Node.js + Express, PostgreSQL via Prisma, and the Google Books API.</li>
+            <li><strong>Algorithm & Recommender Research:</strong> During the literature review phase, I specifically investigated how social network profiles function as taste performances. I brought in research on "semantic taste fabrics" and sentiment-based hybrid recommender systems to inform how we structure our database and discoverability features.</li>
+            <li><strong>Design Philosophy:</strong> Viewing creativity as an essential problem-solving tool, I brought unique solutions to our technical design choices. I emphasized an inner harmony approach—keeping our technical foundations clean and stress-free to allow better user experience design.</li>
+            <li><strong>Takeaways:</strong> I learned how to bridge the gap between high-level ethical considerations (like protecting user privacy and avoiding algorithmic echo chambers) and concrete database schema implementations. I also improved my ability to collaborate cross-functionally and iteratively build a web application based on direct user validation.</li>
+        </ul>
+      </div>
+
+      <div class="case-section">
+        <h3>Next Steps</h3>
+        <p>As we transition through Spring Quarter to launch, our immediate next steps as a team involve rigorous usability testing, expanding our tag-based discovery algorithm, and finalizing the user interfaces. We plan to collect more qualitative feedback to refine the UX before our final handoff.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container site-footer">
+    <p>© 2026 Christopher Chen. Built with Code and Intent.</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
