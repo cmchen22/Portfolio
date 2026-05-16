@@ -106,6 +106,11 @@ h3 {
   color: var(--color-text-muted);
 }
 
+.text-primary {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
 /* --- Nav --- */
 .site-header {
   position: fixed;
@@ -153,9 +158,38 @@ h3 {
   color: var(--color-primary);
 }
 
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
 @media (max-width: 640px) {
   .nav-menu {
     display: none;
+  }
+
+  .nav-menu.is-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-md) var(--space-lg);
+    gap: var(--space-md);
+    z-index: 999;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -305,6 +339,19 @@ h3 {
   transform: translateY(-5px);
   border-color: rgba(16, 185, 129, 0.3);
   box-shadow: var(--shadow-hover);
+}
+
+.project-card h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.project-context {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-sm);
 }
 
 .project-tags {
